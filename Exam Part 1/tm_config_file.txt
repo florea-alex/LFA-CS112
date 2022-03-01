@@ -1,0 +1,70 @@
+//
+//   Comment 0
+//
+States:
+	q0
+	q1
+	q_accept
+	q_reject
+End
+//
+//   Comment 1
+//
+Sigma:
+	0
+	1
+	#
+End
+//
+//   Comment 2
+//
+Gamma:
+	0
+	1
+	#
+	_
+End
+//
+//   Comment 3
+//
+Transitions:
+	q0 q0 0 0 e e N R
+	q0 q0 1 0 e e N R
+	q0 q0 0 1 e e N R
+	q0 q0 1 1 e e N R
+	q0 q1 1 # e e N R
+	q0 q1 0 # e e N R
+	q1 q1 0 0 e e R R
+	q1 q1 1 1 e e R R
+	q1 q_accept 0 _ e e N N
+	q1 q_accept 1 _ e e N N
+	q1 q_accept # _ e e N N
+	q1 q_reject 0 1 e e N N
+	q1 q_reject 1 0 e e N N
+	q1 q_reject # 0 e e N N
+	q1 q_reject # 1 e e N N
+End
+//
+//   Comment 4
+//
+Start state:
+    q0
+End
+//
+//   Comment 5
+//
+Accept state:
+    q_accept
+End
+//
+//   Comment 6
+//
+Reject state:
+    q_reject
+End
+//
+//   Comment 7
+//
+Separator:
+	#
+End

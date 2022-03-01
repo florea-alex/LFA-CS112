@@ -1,0 +1,10 @@
+#Exercițiu realizat în echipă de către Florea Maria-Alexandra, Sasu Alexandru-Cristian, Toader Vlad-Marian.
+
+Începem din starea inițială q0, cu ambele capete la începutul benzii.
+Mutăm capătul din dreapta (unul din cele două) până la întâlnirea #, în timp ce celălalt capăt stă pe loc. 
+La întâlnirea lui ”#”, mai mutăm capătul din dreapta o poziție.
+În acest moment, cele 2 capete pointează la cele 2 șiruri (începuturile lor). Apoi, parcurgem cele 2 șiruri simultan astfel:
+- dacă avem același caracter, înaintăm cu ambele capete cate o pozitie la dreapta, altfel respingem;
+- dacă capătul din dreapta ajunge pe ”_” și cel din stânga nu a trecut de ”#”, acceptăm;
+- dacă capătul din stânga e pe ”#” și cel din dreapta încă e pe literă, respingem;
+- dacă capătul din stânga e pe ”#” iar cel din dreapta e pe ”_”, inseamnă că cele două cuvinte sunt egale, deci acceptăm.
